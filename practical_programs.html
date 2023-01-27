@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*  Write a JavaScript program to concatenate two strings and return the
+  result. If the length of the strings are not same then remove the
+  characters from the longer string.*/
+
+        function str_con_cat(str1, str2) {
+            const m = Math.min(str1.length, str2.length);
+
+            return str1.substring(str1.length - m) + str2.substring(str2.length - m);
+        }
+
+        document.write(str_con_cat("Python", "JS"));
+        document.write(str_con_cat("ab", "cdef"));
+
+        /* Write a JavaScript program to create a new string from a given string,
+         removing the first and last characters of the string if the first or last
+         characters are 'P'. Return the original string if the condition is not
+         satisfied.*/
+
+        function nop(str) {
+            let start_pos = 0;
+            let end_pos = str.length;
+
+            if (str.length > 0 && str.charAt(0) == 'P') {
+                start_pos = 1;
+            }
+
+            if (str.length > 1 && str.charAt(str.length - 1) == 'P') {
+                end_pos--;
+            }
+
+            return str.substring(start_pos, end_pos);
+        }
+
+        document.write(nop("PythonP"));
+        document.write(nop("Python"));
+        document.write(nop("JavaScript"));
+
+        /*Write a JavaScript program to test whether an array of integers of length
+        2 contains 1 or a 3.*/
+
+        function contains13(nums) {
+
+            if (nums.indexOf(1) != -1 || nums.indexOf(3) != -1) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        document.write(contains13([1, 5]));
+        document.write(contains13([2, 3]));
+        document.write(contains13([7, 5]));
+
+        /* Write a JavaScript code to divide a given array of positive integers into
+         two parts. First element goes to first part, second element goes to second
+         part, and third element goes to first part and so on. Now compute the
+         sum of two parts and store into an array of size two.*/
+
+        function alternate_Sums(arr) {
+            var result = [0, 0];
+            for (var i = 0; i < arr.length; i++) {
+                if (i % 2)
+                    result[1] += arr[i];
+                else
+                    result[0] += arr[i];
+            }
+            return result
+        }
+
+        document.write(alternate_Sums([1, 3, 6, 2, 5, 10]))
+
+        /* Write a JavaScript program to find the types of a given angle.
+         Types of angles:
+         a. Acute angle: An angle between 0 and 90 degrees.
+         b. Right angle: An 90 degree angle.
+         c. Obtuse angle: An angle between 90 and 180 degrees.
+         d. Straight angle: A 180 degree angle.*/
+        function angle_Type(angle) {
+            if (angle < 90) {
+                return "Acute angle.";
+            }
+            if (angle === 90) {
+                return "Right angle.";
+            }
+            if (angle < 180) {
+                return "Obtuse angle.";
+            }
+            return "Straight angle.";
+        }
+
+        document.write(angle_Type(47))
+        document.write(angle_Type(90))
+        document.write(angle_Type(145))
+        document.write(angle_Type(180))
+
+        /*. Write a JavaScript program to find the kth greatest element of a given
+array of integers*/
+
+        function Kth_greatest_in_array(arr, k) {
+
+            for (var i = 0; i < k; i++) {
+                var max_index = i,
+                    tmp = arr[i];
+
+                for (var j = i + 1; j < arr.length; j++) {
+                    if (arr[j] > arr[max_index]) {
+                        max_index = j;
+                    }
+                }
+
+                arr[i] = arr[max_index];
+                arr[max_index] = tmp;
+            }
+
+            return arr[k - 1];
+        }
+
+        document.write(Kth_greatest_in_array([1, 2, 6, 4, 5], 3))
+        document.write(Kth_greatest_in_array([-10, -25, -47, -36, 0], 1))
+
+        /* Write a JavaScript program to switch case of the minimum possible
+         number of letters to make a given string written in the upper case or in
+         the lower case.
+         Fox example "Write" will be “write” and "PHp" will be "PHP"*/
+
+        function change_case(new_str) {
+            var x = 0;
+            var y = 0;
+
+            for (var i = 0; i < new_str.length; i++) {
+                if (/[A-Z]/.test(new_str[i])) {
+                    x++;
+                } else y++;
+            }
+
+            if (y > x) return new_str.toLowerCase();
+            return new_str.toUpperCase();
+        }
+
+        document.write(change_case("Write"))
+        document.write(change_case("PHp"))
+
+        /*. Write a JavaScript program to sort the strings of a given array of strings
+        in the order of increasing lengths.*/
+
+        function sort_by_string_length(arra) {
+            for (var i = 0; i < arra.length; i++) {
+                for (var j = i + 1; j < arra.length; j++) {
+                    if (arra[i].length > arra[j].length) {
+                        var m = arra[i];
+                        arra[i] = arra[j];
+                        arra[j] = m;
+                    }
+                }
+            }
+            return arra;
+        }
+        var arra = ["xyz", "acd", "aa", "bb", "zzz", "", "a", "b"];
+        document.write("Original array: " + arra + "\n");
+        document.write(sort_by_string_length(["xyz", "acd", "aa", "bb", "zzz", "", "a", "b"]));
+
+
+        /*  Write a JavaScript program to compute the sum of all digits that occur in
+  a given string.*/
+
+        function sum_digits_from_string(dstr) {
+            var dsum = 0;
+
+            for (var i = 0; i < dstr.length; i++) {
+
+                if (/[0-9]/.test(dstr[i])) dsum += parseInt(dstr[i])
+            }
+            return dsum;
+        }
+
+        document.write(sum_digits_from_string("abcd12efg9"))
+        document.write(sum_digits_from_string("w3resource"))
+
+        /*   Write a JavaScript program to compute the sum of cubes of all
+   integer from 1 to a given integer.*/
+
+        function sum_Of_Cubes(n) {
+            var sumn = 0;
+
+            for (var i = 1; i <= n; i++) {
+                sumn += Math.pow(i, 3);
+            }
+            return sumn;
+        }
+
+        document.write(sum_Of_Cubes(3));
+        document.write(sum_Of_Cubes(4));
+
+        /*    Write a JavaScript program to get the current date.
+    Expected Output :
+    mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy*/
+
+        var today = new Date();
+        var dd = today.getDate();
+
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        today = mm + '-' + dd + '-' + yyyy;
+        document.write(today);
+        today = mm + '/' + dd + '/' + yyyy;
+        document.write(today);
+        today = dd + '-' + mm + '-' + yyyy;
+        document.write(today);
+        today = dd + '/' + mm + '/' + yyyy;
+        document.write(today);
+
+        /*     Write a JavaScript program to convert temperatures to and from
+     Celsius, Fahrenheit.
+     [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f =
+     temperature in Fahrenheit ]
+     Expected Output :
+     60°C is 140 °F
+     45°F is 7.222222222222222°C*/
+
+
+        function cToF(celsius) {
+            var cTemp = celsius;
+            var cToFahr = cTemp * 9 / 5 + 32;
+            var message = cTemp + '\xB0C is ' + cToFahr + ' \xB0F.';
+            document.write(message);
+        }
+
+        function fToC(fahrenheit) {
+            var fTemp = fahrenheit;
+            var fToCel = (fTemp - 32) * 5 / 9;
+            var message = fTemp + '\xB0F is ' + fToCel + '\xB0C.';
+            document.write(message);
+        }
+        cToF(60);
+        fToC(45);
+
+        /* Write a JavaScript program to compute the absolute difference
+ between a specified number and 19. Returns triple their absolute
+ difference if the specified number is greater than 19.*/
+
+        function diff_num(n) {
+            if (n <= 19) {
+                return (19 - n);
+            }
+            else {
+                return (n - 19) * 3;
+            }
+        }
+
+        document.write(diff_num(12));
+        document.write(diff_num(19));
+        document.write(diff_num(22))
+
+
+        /* Write a JavaScript program to concatenate two strings and return
+         the result. If the length of the strings is not same then remove the
+         characters from the longer string.*/
+
+        function str_con_cat(str1, str2) {
+            const m = Math.min(str1.length, str2.length);
+
+            return str1.substring(str1.length - m) + str2.substring(str2.length - m);
+        }
+
+        document.write(str_con_cat("Python", "JS"));
+        document.write(str_con_cat("ab", "cdef"));
+    </script>
+</body>
+
+
+</html>

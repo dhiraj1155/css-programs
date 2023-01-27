@@ -1,0 +1,90 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function testString(str1,str2)
+        {
+            re=/india/g;
+
+            result1=re.exec(str1);
+            result2=re.exec(str2)
+
+            if(result1)
+            document.write("the first text contains word"+result1)
+
+            else
+            document.write("the first text does not contains word india")
+
+            if(result2)
+            document.write("the second text contains word"+result2)
+
+            else
+            document.write("the second text does not contain word india")
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var str1="i love my country "
+        var str2="india has huge heritage and culture"
+
+        document.write(str1) 
+        document.write("<br>"+str2)
+
+    </script>
+
+    <input type="button" value="check for match" name="" id="" onclick="testString(str1,str2)">
+</body>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function testString(str1,str2)
+        {
+            re=/india/g
+
+            result1=re.exec(str1)
+            result2=re.exec(str2)
+
+            if(result1)
+            
+                document.write("the first text contain word"+result1)
+            
+            else
+                document.write("the first word dont contain word india")
+            
+
+            if(result2)
+            
+                document.write("the second text contain word"+result2)
+            
+            else
+                document.write("the second word dont contain word india")
+            
+
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var str1="i love my country"
+        var str2="india has huge heritage"
+        document.write(str1)
+        document.write(str2)
+
+        
+    </script>
+    <input type="button" value="check for match" onclick="testString(str1,str2)" name="" id="">    
+</body>
+</html>

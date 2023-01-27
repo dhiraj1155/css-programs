@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_controls</title>
+</head>
+<body>
+    <form action="" name="form">
+        name: <input type="text" name="firstname" id="fname"> <br> <br>
+
+        address : <br> <textarea id="address" cols="40" rows="5"></textarea> <br>
+
+        gender: <input type="radio" name="gender" value="male" checked>male
+                 <input type="radio" name="gender" value="female">female <br>
+           
+        select subjects: <br>
+        <select name="subjects" > <br>
+            <option value="osy" name="sub" >osy</option>
+            <option value="ajp" name="sub">ajp</option>
+            <option value="ste" name="sub">ste</option>
+            <option value="est" name="sub">est</option> <br>
+
+             select fruit: <br>
+            <input type="checkbox" name="fruit">orange
+            <input type="checkbox" name="fruit" checked>mango
+            <input type="checkbox" name="fruit">banana
+
+            submit: 
+            <input type="button" value="submit" name="submit" onclick="display(this.form)" >
+        </select>
+        </form>
+
+        <script>
+              
+            function display(form)
+            {
+                var name=form.fname.value
+                document.write("name is "+name)
+
+                var address1=form.address.value
+                document.write("address is "+address1)
+
+                var gen;
+                
+                for(var i=0;i<form.gender.length;i++)
+                {
+                    if(form.gender[i].checked)
+                    {
+                        gen=form.gender[i].value;
+                    }
+                }
+
+                document.write("gender is "+gen)
+                var fruit=[];
+                for(var j=0;j<form.fruit.length;j++)
+                {
+                    if(form.fruit[j].checked)
+                    {
+                        fruit[j]=form.fruit[j].value;
+                    }
+                }
+                document.write("selected fruits are <br> "+fruit)
+            }
+        </script>
+</body>
+</html>

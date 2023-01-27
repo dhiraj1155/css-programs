@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onmousemove="fun1()" onmouseout="fun2()" onmousedown="fun3()">
+    <img src="1.png" alt="" height="200px" width="200px" >
+    <p id="p"></p>
+    <span id="points">(0,0)</span>
+
+    <script>
+        function fun1()
+        {
+            p.innerHTML="now the mouse is moving"
+        }
+        function fun2()
+        {
+            p.innerHTML="now the mouse is out"
+        }
+        function fun3()
+        {
+            points.innerHTML="("+event.offsetX+","+event.offsetY+")";
+        }
+    </script>
+</body>
+</html>

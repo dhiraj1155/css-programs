@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>person_obj</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            firstname: 'john',
+            lastname: 'doe',
+            age: 90,
+            eyecolor: 'blue'
+        }
+        delete person.eyecolor;
+
+        document.write("object after deleting eyecolor is " + " <br>firstname:" + person.firstname + " <br> lastname: " + person.lastname + "<br> age: " + person.age + "<br>eyecolor:" + person.eyecolor)
+    </script>
+</body>
+
+</html>

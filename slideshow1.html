@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        myslides=new Array('1.png','2.png','3.png')
+        i=0;
+        function DisplaySlides(slidenum)
+        {
+            i=i+slidenum;
+            if(i>myslides.length-1)
+            {
+                i=0
+            }
+            if(i<0)
+            {
+                i=myslides.length-1
+            }
+            document.slideID.src=myslides[i]
+        }
+        // var t=setInterval("DisplaySlides(1)","DisplaySlides(-1)",200)
+    </script>
+</head>
+<body>
+    <img src="1.png" name="slideID" alt="">
+    <input type="button" value="previos" onclick="DisplaySlides(-1)" name="" id="">
+    <input type="button" value="next" onclick="DisplaySlides(1)" name="" id="">
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        mySlides=new Array('1.png','2.png','3.png')
+        i=0
+        function DisplaySlides(slidenum)
+        {   i=i+slidenum
+            if(i>mySlides.length-1)
+            {
+                i=0
+            }
+
+            if(i<0)
+            {
+                i=mySlides.length-1;
+            }
+            document.slideID.src=mySlides[i]
+        }
+    </script>
+</head>
+<body>
+    <img src="1.png" name="slideID" alt="">
+
+    <input type="button" value="previous" onclick="DisplaySlides(-1)">
+    <input type="button" value="next" onclick="DisplaySlides(1)">
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        mySlides=new Array('1.png','2.png','3.png')
+        i=0
+        function Display_Slides(slidenum)
+        {
+            i=i+slidenum;
+            if(i>mySlides.length)
+            {
+                i=0
+            }
+            if(i<0)
+            {
+                i=mySlides.length-1
+            }
+            document.slideID.src=mySlides[i]
+        }
+    </script>
+</head>
+<body>
+    <img src="1.png" name="slideID" alt="">
+    <input type="button" name="" value="previous" onclick="Display_Slides(-1)"id="">
+    <input type="button" name="" value="next" onclick="Display_Slides(1)"id="">
+</body>
+</html>

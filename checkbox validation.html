@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfun()
+        {
+            var str="you have selected:";
+            with(document.forms.myform)
+            {
+                
+                if(red.checked==true)
+                str+="red";
+
+                if(blue.checked==true)
+                str+="blue"
+
+                if(green.checked==true)
+                str+="green"
+
+            }
+            alert(str)
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myform">
+        select sub:
+        <input type="checkbox" name="red"  value="red"id="">red
+        <input type="checkbox" name="blue"  value="blue"id="">blue
+        <input type="checkbox" name="green"  value="green"id="">green
+
+        <input type="button" name="choosecolor" value="chose color" onclick="myfun()"id="">
+    </form>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show()
+        {
+            var str="you have selected "
+            with(document.forms.myform)
+            {
+
+                if(red.checked==true)
+                {
+                    str+="red"
+                }
+
+                if(green.checked==true)
+                {
+                    str+="green"
+                }
+
+                if(yellow.checked==true)
+                {
+                    str+="yellow"
+                }
+            }
+            alert(str)
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myform">
+        <input type="checkbox" name="red" value="red" id="">red
+        <input type="checkbox" name="green" value="green" id="">green
+        <input type="checkbox" name="yellow" value="yellow" id="">yellow
+
+        <input type="button" value="show"onclick="show()">
+    </form>
+</body>
+</html>

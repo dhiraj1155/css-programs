@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>read cookie</title>
+</head>
+<body>
+    
+    <form action="" name="myform">
+        <input type="button" name="" id="" value="readCookie" onclick="readCookie()">
+    </form>
+    <script>
+        function readCookie()
+        {
+            with(document.myform)
+            {
+                value=document.cookie.split('=')[1];
+                document.write("<br> value="+value)
+            }
+        }
+    </script>
+
+
+
+</body>
+</html>

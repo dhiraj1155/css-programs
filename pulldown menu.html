@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getpage(choice)
+        {
+            page=choice.options[choice.selectedIndex].value;
+            if(page!="")
+            window.location=page
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myform">
+        select fav site:
+        <select name="option" id="" onchange="getpage(this)">
+            <option value="http://www.google.com">google</option>
+            <option value="http://www.msbte.gov.in">msbte</option>
+            <option value="http://www.youtube.com">youtube</option>
+        </select>
+    </form>
+</body>
+</html>

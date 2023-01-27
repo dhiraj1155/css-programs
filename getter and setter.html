@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getter and setter</title>
+</head>
+<body>
+    <script>
+        function user(name,age)
+        {
+            this.name=name;
+            this.age=age;
+        }
+        var u=new user("ishan",19)
+
+        document.write("user="+u.name+" "+"age= "+u.age)
+
+        user.city="kopergaon"//setting properties
+
+        var city=user.city//getting properties
+
+        document.write("city="+city)
+
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function user(name,age)
+        {
+            this.name=name;
+            this.age=age
+        }
+
+        var u=new user("ishan",19)
+        document.write("name "+u.name+""+" age="+u.age)
+
+        user.city="kopergaon"//setting properties
+
+        var city=user.city;//getting prop
+        document.write("city="+city)
+    </script>
+</body>
+</html>
+

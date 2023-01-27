@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function update_list(ElementValue)
+        {
+            with(document.forms.myform)
+            {
+               if(red.checked==true)
+               {
+                body.style.background-color="red";
+               }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myform">
+        <p>
+            <select name="optionList" id="" size="2">
+                <option value="red">red
+                <option value="blue">blue
+                <option value="green">green
+                
+            </select>
+
+            <input type="radio" name="grp1" value="1" checked="true" onclick="update_list(this.value)"> fruits
+            <input type="radio" name="grp1" value="2" onclick="update_list(this.value)">Vegetables
+        </p>
+    </form>
+</body>
+</html>

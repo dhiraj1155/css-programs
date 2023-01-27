@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function update_list(ElementValue)
+        {
+            with(document.forms.myform)
+            {
+                if(ElementValue==1)
+                {
+                    optionList[0].text="mango";
+                    optionList[0].value=1;
+                    optionList[1].text="apple";
+                    optionList[1].value=2;
+                    optionList[2].text="banana";
+                    optionList[2].value=3;
+                }
+                if(ElementValue==2)
+                {
+                    optionList[0].text="potato";
+                    optionList[0].value=1;
+                    optionList[1].text="tomato";
+                    optionList[1].value=2;
+                    optionList[2].text="fenugreek";
+                    optionList[2].value=3;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myform">
+        <p>
+            <select name="optionList" size="2">
+                <option value="1">mango
+                <option value="2">banana
+                <option value="3">apple
+            </select>
+
+            <input type="radio" name="grp1" value="1" checked="true" onclick="update_list(this.value)">fruits
+            <input type="radio" name="grp1" value="2" onclick="update_list(this.value)">Vegetables
+        </p>
+    </form>
+</body>
+</html>

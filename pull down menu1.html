@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function getpage(choice)
+        {
+            page=choice.options[choice.selectedIndex].value;
+            if(page!="")
+            {
+                window.location=page;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" name="myform" method="post">
+        select your fav site: 
+        <select name="MenuChoice" onchange="getpage(this)">
+        <option value="https://www.google.com">google</option>
+        <option value="https://www.msbte.com">msbte</option>
+        <option value="https://www.youtube.com">youtube</option>
+        <!-- </select> -->
+    </form>
+</body>
+</html>

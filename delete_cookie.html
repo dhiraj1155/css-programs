@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete cookie</title>
+</head>
+<body>
+    <form action="" name="myform">
+        username: <input type="text" name="name" id="name">
+
+        <input type="button" value="delete cookie" onclick="delete_cookie()">
+    </form>
+    <script>
+        function delete_cookie()
+        {
+            expiryDate=new Date();
+            expiryDate.setMonth(expiryDate.getMonth()-1);
+            with(document.myform)
+            {
+                document.cookie="username="+name.value+";";
+                document.cookie="expires="+expiryDate.toUTCString()+";"
+                alert("cookie deleted")
+            }
+        }
+
+    </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        username: <input type="text" name="usernmae" id="username">
+
+        <input type="button" value="delete cookie" onclick="delete_cookie()">
+    </form>
+    <script>
+        function delete_cookie()
+        {
+            expiryDate=new Date();
+            expiryDate.setMonth(expiryDate.getMonth()-1)
+            
+            with(document.myform)
+            {
+                document.cookie="username="+username.value;
+                document.cookie="expires="+expiryDate.toUTCString();
+                alert("cookie deleted")
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        name: <input type="text" name="name" id="name">
+
+        <input type="button" value="delete_cookie" onclick="delete_cookie()">
+    </form>
+</body>
+<script>
+    function delete_cookie()
+    {
+        expiryDate=new Date();
+
+        expiryDate.setMonth(expiryDate.getMonth()-1)
+        
+        with(document.myform)
+        {
+            document.cookie="name="+name.value;
+            document.cookie="expires="+expiryDate.toUTCString();
+            alert("cookie deleted")
+        }
+    }
+</script>
+</html>

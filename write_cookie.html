@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>write cookie</title>
+</head>
+<body>
+    <form action="" name="myform">
+        name: <input type="text" name="name" id="name">
+
+        <input type="button" value="setCookie" onclick="setCookie()">
+
+    </form>
+
+    <script>
+        function setCookie()
+        {
+            with(document.myform)
+            {
+                document.cookie="name="+name.value;
+                alert("cookie is set")
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myform">
+        name: <input type="text" name="name" id="name">
+
+        <input type="button" onclick="setCookie()" value="setCookie" name="" id="">
+    </form>
+</body>
+<script>
+    function setCookie()
+    {
+        document.cookie="name="+name.value;
+        alert("cookie is set")
+    }
+</script>
+</html> -->

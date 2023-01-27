@@ -1,0 +1,85 @@
+  <!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+  
+
+    <form id="login-form">
+      
+        username:
+        <input type="text" id="username" name="username">
+        <br>
+        password:
+        
+        <input type="password" id="password" name="password">
+        <br><br>
+
+
+        <button type="submit" onclick="storeCookies(),display_cookies()">Submit</button>
+
+    </form>
+
+    <script>
+
+
+        function storeCookies() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            document.cookie = "username=" + username + ";"
+            document.cookie = "password=" + password + ";"
+            // redirect to a different page or display a message
+        }
+        function display_cookies() {
+            document.write("cookie name= " + password.value)
+        }
+    </script>
+</body>
+
+</html>   -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- Design a webpage that displays a form that contains an input for 
+  user name and password. User is prompted to enter the input 
+  user name and password and password become value of the 
+  cookies. Write the javascript function for storing the cookies. -->
+  
+
+  <form action="" name="myform">
+    name: <input type="text" name="username" id="username">
+    password: <input type="password" name="password" id="password">
+
+    <button type="submit" name="" value="submit" onclick="storeCookie(),DisplayCookie()" id="">submit
+  </form>
+</body>
+<script>
+    function storeCookie()
+    {
+        var username=document.getElementById('username').value
+        var password=document.getElementById('password').value
+
+        document.cookie=("name="+username);
+        document.cookie=("name="+password);
+    }
+    function DisplayCookie()
+    {
+        document.write("cookie name="+password.value)
+    }
+</script>
+</html>
